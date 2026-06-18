@@ -1,0 +1,398 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar-left { display: flex; align-items: center; gap: 10px; }
+.topbar-title { font-size: 14px; font-weight: 600; letter-spacing: -0.01em; }
+.topbar-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  background: var(--amber-bg);
+  color: var(--amber);
+  padding: 2px 7px;
+  border-radius: 20px;
+}
+
+.topbar-actions { display: flex; gap: 8px; }
+.topbar-actions-empty { min-width: 1px; }
+.tbtn {
+  padding: 6px 14px;
+  font-size: 12px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.tbtn:hover { background: var(--bg-hover); color: var(--text-primary); }
+.tbtn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.tbtn-primary:hover { background: var(--accent-hover); }
+
+.app-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+.topbar-user {
+  align-self: center;
+  max-width: 180px;
+  color: var(--text-secondary);
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(2, 6, 23, .72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+.detail-modal {
+  width: min(1500px, 96vw);
+  max-height: 92vh;
+  overflow: visible;
+  position: relative;
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.42);
+}
+
+.detail-modal .cdet {
+  max-height: 92vh;
+  overflow: auto;
+  border-radius: 18px;
+}
+.detail-close {
+  position: absolute;
+  right: 16px;
+  top: -22px;
+  z-index: 5;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 22px;
+  cursor: pointer;
+}
+.detail-close:hover { color: var(--text-primary); background: var(--bg-hover); }
+@media (max-width: 720px) {
+  .topbar-actions { display: none; }
+  .app-content { padding: 12px; }
+}
+
+.screening-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(108, 99, 255, 0.32), transparent 28%),
+    radial-gradient(circle at 82% 72%, rgba(74, 222, 128, 0.16), transparent 26%),
+    var(--bg-primary);
+  overflow: hidden;
+  position: relative;
+}
+
+.screening-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(circle, black 0%, transparent 72%);
+}
+
+.screening-card {
+  width: min(460px, 92vw);
+  position: relative;
+  z-index: 2;
+  background: rgba(24, 28, 37, 0.82);
+  border: 1px solid rgba(108, 99, 255, 0.34);
+  border-radius: 22px;
+  padding: 24px 28px 28px;
+  box-shadow: 0 26px 90px rgba(0, 0, 0, .48);
+  backdrop-filter: blur(16px);
+  text-align: center;
+}
+
+.screening-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--accent-dim);
+  color: var(--accent-hover);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.screening-card h1 {
+  font-size: 27px;
+  line-height: 1.18;
+  letter-spacing: -0.05em;
+  margin-bottom: 10px;
+}
+
+.screening-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.screening-progress {
+  height: 8px;
+  margin: 24px 0 12px;
+  border-radius: 999px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.screening-progress span {
+  display: block;
+  height: 100%;
+  width: 48%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), var(--green));
+  animation: screeningProgress 2.3s ease-in-out infinite;
+}
+
+.screening-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--text-tertiary);
+  font-size: 11px;
+}
+
+.screening-orb-wrap {
+  position: absolute;
+  z-index: 1;
+  width: 360px;
+  height: 360px;
+  display: grid;
+  place-items: center;
+  transform: translateY(-108px);
+  opacity: .95;
+}
+
+.screening-orb {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff, var(--accent) 32%, #312b91 68%);
+  box-shadow: 0 0 44px rgba(108,99,255,.55), 0 0 100px rgba(74,222,128,.14);
+  animation: orbPulse 1.55s ease-in-out infinite;
+}
+
+.screening-ring {
+  position: absolute;
+  border: 1px solid rgba(108,99,255,.38);
+  border-radius: 50%;
+}
+
+.ring-one {
+  width: 230px;
+  height: 230px;
+  border-top-color: var(--green);
+  animation: spin 4.2s linear infinite;
+}
+
+.ring-two {
+  width: 315px;
+  height: 315px;
+  border-right-color: var(--accent-hover);
+  animation: spin 7s linear infinite reverse;
+}
+
+.screening-chip {
+  position: absolute;
+  padding: 7px 11px;
+  border: 1px solid var(--border-light);
+  border-radius: 999px;
+  background: rgba(24,28,37,.88);
+  color: var(--text-secondary);
+  font-size: 11px;
+  box-shadow: var(--shadow-card);
+  animation: floatChip 2.2s ease-in-out infinite;
+}
+
+.chip-a { top: 78px; left: 38px; }
+.chip-b { right: 30px; top: 116px; animation-delay: .25s; }
+.chip-c { bottom: 70px; left: 128px; animation-delay: .5s; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes orbPulse { 0%, 100% { transform: scale(.96); } 50% { transform: scale(1.08); } }
+@keyframes floatChip { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes screeningProgress { 0% { transform: translateX(-110%); } 100% { transform: translateX(230%); } }
+
+.backend-warning {
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  border-radius: 12px;
+  background: rgba(251, 191, 36, 0.09);
+  color: var(--amber);
+  font-size: 12px;
+}
+
+/* Recruitly logo branding */
+.auth-logo-img {
+  width: 230px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 22px rgba(255, 255, 255, .18));
+}
+.screening-logo {
+  width: 230px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto 8px;
+  display: block;
+  border-radius: 18px;
+  filter: drop-shadow(0 0 28px rgba(255,255,255,.22));
+  animation: logoPulse 2s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); opacity: .96; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* Modern dashboard shell */
+.app-shell {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(108,99,255,.20), transparent 30%),
+    radial-gradient(circle at 82% 5%, rgba(74,222,128,.10), transparent 28%),
+    linear-gradient(135deg, #090b12 0%, #10131f 45%, #0b1020 100%);
+}
+
+.app-main {
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.app-topbar {
+  margin: 16px 18px 0;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 18px;
+  background: rgba(18, 22, 34, .78);
+  box-shadow: 0 18px 60px rgba(0,0,0,.22);
+  backdrop-filter: blur(18px);
+}
+
+.topbar-title {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.app-content {
+  padding: 18px;
+}
+
+.backend-warning {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid rgba(251,191,36,.28);
+  border-radius: 14px;
+  background: rgba(251,191,36,.08);
+  color: #fde68a;
+}
+
+/* Fix: logo PNG sudah transparan, jangan invert background hitam jadi kotak putih */
+.auth-logo-img,
+.screening-logo {
+  filter: drop-shadow(0 0 22px rgba(255,255,255,.18)) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Fix loading: logo tampil langsung, tanpa card/background kotak */
+.screening-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding-top: 0 !important;
+}
+
+.screening-logo {
+  width: 245px !important;
+  border-radius: 0 !important;
+  margin: 0 auto 6px !important;
+}
+
+/* Fix login/register logo overlap: logo image already includes text */
+.auth-brand h1 {
+  display: none !important;
+}
+
+.auth-brand {
+  gap: 8px !important;
+  margin-bottom: 22px !important;
+}
+
+.auth-logo-img {
+  width: 230px !important;
+  height: auto !important;
+  margin: 8px auto 2px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.auth-brand p {
+  margin-top: 4px !important;
+}
+
+@media (max-width: 520px) {
+  .auth-logo-img { width: 210px !important; }
+}
+
+
+/* mobile sidebar rail spacing */
+@media (max-width: 720px) {
+  .app-main,
+  .main-content,
+  .dashboard-shell,
+  .content {
+    margin-left: 68px;
+  }
+}

@@ -1,0 +1,37 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Model PKL files
+*.pkl
+
+# Other
+onik.ipynb
+dump
+generate_notebooks.py
+modelling_SBERT.txt
+generate_clustering_notebook.py
+
+# ONNX Models (keep only quantized)
+onnx_SBERT/*
+!onnx_SBERT/*_quantized.onnx
+onnx_NER/*
+!onnx_NER/*_quantized.onnx
+
+# CSV Datasets
+*.csv
+
+# Clustering Ignored Files
+clustering_models/
+modelling_Clustering.py
+modelling_Clustering.ipynb
+generate_evaluation_notebook.py

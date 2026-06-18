@@ -1,0 +1,42 @@
+{
+  "analytics_engineer": {
+    "title": "Analytics Engineer",
+    "skills": "\"Airflow\", \"BigQuery\", \"Git\", \"Looker\", \"Python\", \"SQL\", \"Snowflake\", \"dbt\"",
+    "description": "Join E.ON SE as a Analytics Engineer in Essen.\nYour profile:\n- Python for data analysis\n- Pandas and NumPy\n- Kubeflow\n- Git version control\n- NumPy\n- SQL and database querying\n- Jupyter"
+  },
+  "bi_engineer": {
+    "title": "BI Engineer",
+    "skills": "\"Airflow\", \"Azure\", \"Git\", \"Power BI\", \"Python\", \"SQL\", \"Tableau\", \"dbt\"",
+    "description": "RTL Deutschland GmbH seeks an experienced BI Engineer in Cologne.\nYour profile:\n- FastAPI\n- Python for data analysis\n- GCP\n- Pandas and NumPy\n- Matplotlib\n- TensorFlow deep learning\n- Git version control"
+  },
+  "business_intelligence_analyst": {
+    "title": "Business Intelligence Analyst",
+    "skills": "\"Cognos\", \"Excel\", \"Looker\", \"Power BI\", \"Python\", \"SQL\", \"SSRS\", \"Tableau\"",
+    "description": "Siemens AG seeks an experienced Business Intelligence Analyst in Munich.\nYour profile:\n- SQL Server Reporting Services\n- Advanced Excel (Pivot, Power Query)\n- Power BI dashboards and reports\n- MicroStrategy BI\n- SAP BW / SAP HANA\n- Looker\n- Tableau visualisation"
+  },
+  "data_analyst": {
+    "title": "Data Analyst",
+    "skills": "\"Excel\", \"Jupyter\", \"NumPy\", \"Pandas\", \"Power BI\", \"Python\", \"SQL\", \"Tableau\"",
+    "description": "Join Commerzbank AG as a Data Analyst in Frankfurt.\nYour profile:\n- Python for data analysis\n- GCP\n- Pandas and NumPy\n- BigQuery\n- TensorFlow deep learning\n- NumPy\n- SQL and database querying"
+  },
+  "data_architect": {
+    "title": "Data Architect",
+    "skills": "\"AWS\", \"Azure\", \"GCP\", \"Hadoop\", \"Kafka\", \"SQL\", \"Snowflake\", \"Spark\"",
+    "description": "Haribo GmbH in Dortmund is hiring a Data Architect (m/w/d).\nYour profile:\n- Python for data analysis\n- Pandas and NumPy\n- Advanced Excel (Pivot, Power Query)\n- Power BI dashboards and reports\n- NumPy\n- SQL and database querying\n- Jupyter"
+  },
+  "data_engineer": {
+    "title": "Data Engineer",
+    "skills": "\"AWS\", \"Airflow\", \"Docker\", \"Kafka\", \"Kubernetes\", \"Python\", \"SQL\", \"Spark\"",
+    "description": "About You SE in Hamburg is hiring a Data Engineer (m/w/d).\nYour profile:\n- Python for data analysis\n- BigQuery\n- Kubeflow\n- Apache Spark / PySpark\n- Terraform IaC\n- Docker containerisation\n- Kubernetes orchestration"
+  },
+  "data_scientist": {
+    "title": "Data Scientist",
+    "skills": "\"Jupyter\", \"Machine Learning\", \"Pandas\", \"PyTorch\", \"Python\", \"SQL\", \"Scikit-learn\", \"TensorFlow\"",
+    "description": "Vonovia SE in Dortmund is hiring a Data Scientist (m/w/d).\nYour profile:\n- Pandas and NumPy\n- Matplotlib\n- Power BI dashboards and reports\n- Git version control\n- NumPy\n- SQL and database querying\n- Jupyter"
+  },
+  "ml_engineer": {
+    "title": "ML Engineer",
+    "skills": "\"AWS\", \"Docker\", \"FastAPI\", \"Kubeflow\", \"Machine Learning\", \"PyTorch\", \"Python\", \"TensorFlow\"",
+    "description": "Allianz SE seeks an experienced ML Engineer in Munich.\nYour profile:\n- Python for data analysis\n- Advanced Excel (Pivot, Power Query)\n- Power BI dashboards and reports\n- SQL and database querying\n- Jupyter\n- R"
+  }
+}
