@@ -1,0 +1,23 @@
+# App Config
+APP_ENV=development
+DEBUG=True
+CORS_ORIGINS=
+
+# Supabase
+SUPABASE_URL=
+SUPABASE_KEY=
+
+# MLflow
+MLFLOW_TRACKING_URI=file:
+MLFLOW_EXPERIMENT_NAME=
+
+# File Upload
+MAX_UPLOAD_SIZE_MB=
+TEMP_UPLOAD_DIR=
+
+# ============================================
+# JWT CONFIGURATION
+# ============================================
+JWT_SECRET_KEY=
+JWT_ALGORITHM=
+JWT_ACCESS_TOKEN_EXPIRE_MINUTES=

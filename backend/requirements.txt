@@ -1,0 +1,38 @@
+# Core Framework
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+python-multipart==0.0.12
+
+# PDF Processing
+PyMuPDF==1.24.0
+PyPDF2==3.0.1
+
+# Machine Learning & NLP
+scikit-learn==1.5.1
+spacy==3.7.5
+numpy==1.26.4
+pandas==2.2.2
+
+# Database
+supabase==2.5.0
+asyncpg==0.30.0
+
+# MLflow - Experiment Tracking
+mlflow==2.15.1
+
+# Environment & Utilities
+python-dotenv==1.0.1
+pydantic==2.9.2
+pydantic-settings==2.4.0
+
+# Logging
+python-json-logger==2.0.7
+
+# ============================================
+# AUTHENTICATION
+# ============================================
+pyjwt==2.10.0
+passlib==1.7.4
+bcrypt==4.3.0
+email-validator==2.1.0   
+onnxruntime==1.18.0
